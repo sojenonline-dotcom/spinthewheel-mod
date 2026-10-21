@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Spin the Wheel ✿</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<span class="float" style="top:8%;left:6%">🌸</span>
+<span class="float" style="top:18%;right:7%;animation-delay:-2s">☁️</span>
+<span class="float" style="bottom:12%;left:8%;animation-delay:-4s">🍓</span>
+<span class="float" style="bottom:20%;right:6%;animation-delay:-1s">✨</span>
+
+<h1 id="title">✿ Spin the Wheel ✿</h1>
+<p class="sub">Press the button and see what you get!</p>
+
+<div class="stage">
+  <div class="pointer">🎀</div>
+  <canvas id="wheel"></canvas>
+  <button class="hub" id="spin">SPIN</button>
+</div>
+
+<button class="btn ghost" id="creatorBtn">✦ Creator mode</button>
+
+<section class="card" id="panel" style="display:none">
+  <h2>✦ Creator mode</h2>
+  <p class="hint">Tap a word to ⭐ star it. If may starred words, sila lang ang puwedeng lumabas sa spin (random among the starred). Kapag walang star, fair spin siya.</p>
+  <div class="row">
+    <input type="text" id="newWord" placeholder="Add a word…" maxlength="24">
+    <button class="btn" id="add">Add</button>
+  </div>
+  <div class="chips" id="chips"></div>
+  <p class="status" id="status"></p>
+  <div class="row">
+    <button class="btn ghost" id="clearStars">Clear stars</button>
+    <button class="btn ghost" id="hidePanel">Hide panel</button>
+  </div>
+</section>
+
+<div class="modal" id="modal">
+  <div class="pop"><small>You got…</small><div class="w" id="result"></div><button class="btn" id="close">Yay! ♡</button></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
