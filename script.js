@@ -8,6 +8,7 @@
   var cv=document.getElementById('wheel'),ctx=cv.getContext('2d'),rot=0,spinning=false,size=0;
   function fit(){var r=cv.getBoundingClientRect(),d=window.devicePixelRatio||1;size=r.width;cv.width=size*d;cv.height=size*d;ctx.setTransform(d,0,0,d,0,0);draw()}
   function draw(){
+    if(size<=0)return;
     var n=words.length,c=size/2,R=c-8,seg=2*Math.PI/n;
     ctx.clearRect(0,0,size,size);
     ctx.beginPath();ctx.arc(c,c,c-2,0,7);ctx.fillStyle='#fff';ctx.fill();
